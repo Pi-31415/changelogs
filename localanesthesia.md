@@ -1,5 +1,6 @@
 ### To Solve
 
+- Wrong Spinning Direction on Longitudinal Axis of Syringe
 - Wrong Direction of Haply Translation and Virtual Syringe
 - Implement Simplified Procedure
 - Haptic Feedback is absent (check mesh)
