@@ -1,5 +1,5 @@
 
-The BNO055 sensor annd Unity uses very similar but slightly different coordinate systems (just one flipped axis). Hence, the syringe works for all rotation motion, except spinning it on it's logitudinal axis. I disabled this spinning for now in ``FSRSyringe.cs``` with
+The BNO055 sensor annd Unity uses very similar but slightly different coordinate systems (just one flipped axis). Hence, the syringe works for all rotation motion, except spinning it on it's logitudinal axis. I disabled this spinning for now in ```FSRSyringe.cs``` with
 
   
 ```cs
