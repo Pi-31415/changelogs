@@ -12,12 +12,16 @@
 
 
 
-The BNO055 sensor annd Unity uses very similar but slightly different coordinate systems (just one flipped axis). Hence, the syringe works for all rotation motion, except spinning it on it's logitudinal axis. I disabled this spinning for now in ```FSRSyringe.cs``` with
+The BNO055 sensor annd Unity uses very similar but slightly different coordinate systems (just one flipped axis). Hence, the syringe works for all rotation motion, except spinning it on it's logitudinal axis. The correct Quaternion configuration is
 
   
 ```cs
-// [Pi] - Disable the unwanted rotation along the longitudinal syringe axis 
-// Compensate for any unwanted tilt caused by the correction on the Z-axis
-Vector3 angles = transform.localEulerAngles;
-transform.localRotation = Quaternion.Euler(new Vector3(angles.x, angles.y, 0));  // Assuming the unwanted tilt occurs on the x and y axes
+                float x = float.Parse(tokens[0]);
+                float y = float.Parse(tokens[1]);
+                float z = float.Parse(tokens[2]);
+                float w = float.Parse(tokens[3]);
+                Quaternion targetRotation = new Quaternion(y, -z, -x, w);
+
+                //And Calibrate with the following reference Quaternion
+                initialReferenceRotation = Quaternion.Euler(0, 180,0 );
 ``` 
