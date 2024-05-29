@@ -24,4 +24,9 @@ The BNO055 sensor annd Unity uses very similar but slightly different coordinate
 
                 //And Calibrate with the following reference Quaternion
                 initialReferenceRotation = Quaternion.Euler(0, 180,0 );
-``` 
+```
+
+Need to use separate thread to read serial data (when used with OVR)
+
+
+Press K for calibration
